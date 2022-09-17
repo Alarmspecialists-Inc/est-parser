@@ -3,9 +3,10 @@
 ## Introduction
 
  Parses select EST reports and extracts device data
-    -IO Config Report
-    -EST3 Barcode Worksheet
-    -EST4 report parsing to come
+
+- IO Config Report
+- EST3 Barcode Worksheet
+- EST4 report parsing to come
 
 For Node ONLY. Will NOT work in browser.
 
