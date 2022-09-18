@@ -23,12 +23,12 @@ EST3 Barcode Worksheet must be printed using Microsoft Print to PDF in 3-SDU as 
 
     import {parseEST3, parseIO} from 'est-parser';
 
-    parseEST3(buffer)
+    parseEST3(buffer) //buffer from EST3 Barcode Worksheet
         .then(res => {
             console.log(res) //array of device objects
         })
     
-    parseIO(buffer)
+    parseIO(buffer) //buffer from IO Config Report
         .then(res => {
             console.log(res) //array of device objects
         })
