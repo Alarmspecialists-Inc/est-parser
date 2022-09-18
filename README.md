@@ -1,8 +1,14 @@
 # est-parser
 
+## installation
+
+    yarn add @tysonalcorn/est-parser
+or
+    npm install @tysonalcorn/est-parser
+
 ## Introduction
 
- Parses select EST reports and extracts device data
+ Parses select Edwards EST reports and extracts device data. Intended for applications specific to the fire alarm industry.
 
 - IO Config Report
 - EST3 Barcode Worksheet
