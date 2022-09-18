@@ -1,11 +1,14 @@
 # est-parser
 
-## installation
+## Table of Contents
 
-    yarn add @tysonalcorn/est-parser
-or
-
-    npm install @tysonalcorn/est-parser
+- [Introduction](#introduction)
+- [Installation](#installation)
+- [Usage](#usage)
+  - [Return Values](#return-values)
+    - [EST3 Barcode Worksheet](#est3-barcode-worksheet)
+    - [IO Config Report](#io-config-report)
+- [Testing](#testing)
 
 ## Introduction
 
@@ -19,47 +22,68 @@ For Node ONLY. Will NOT work in browser.
 
 EST3 Barcode Worksheet must be printed using Microsoft Print to PDF in 3-SDU as a letter sized document. Exporting the report to a PDF directly in 3-SDU will cause the sizing of the document to be off. This will be addressed in future updates.
 
+## Installation
+
+    yarn add @tysonalcorn/est-parser
+or
+
+    npm install @tysonalcorn/est-parser
+
 ## Usage
 
-    import {parseEST3, parseIO} from 'est-parser';
+```javascript
 
-    parseEST3(buffer) //buffer from EST3 Barcode Worksheet
-        .then(res => {
-            console.log(res) //array of device objects
-        })
+import {parseEST3, parseIO} from '@tysonalcorn/est-parser';
+
+parseEST3(buffer) //buffer from EST3 Barcode Worksheet
+    .then(res => {
+        console.log(res) //array of device objects
+    })
     
-    parseIO(buffer) //buffer from IO Config Report
-        .then(res => {
-            console.log(res) //array of device objects
-        })
+parseIO(buffer) //buffer from IO Config Report
+    .then(res => {
+        console.log(res) //array of device objects
+    })
+```
 
 ### Return Values
 
 #### EST3 Barcode Worksheet
 
-    [
-        {
-            label: "SD_1_DLR",
-            message1: "SMOKE DETECTOR L1D1  ",
-            message2: "AT FACP",
-            model: "PS",
-            type: "SMOKE",
-            logicalAddress: "01020001",
-            barcode: "3902009904",
-            panelName: "FACP",
-        }
-    ]
+```javascript
+[
+    {
+        label: "SD_1_DLR",
+        message1: "SMOKE DETECTOR L1D1  ",
+        message2: "AT FACP",
+        model: "PS",
+        type: "SMOKE",
+        logicalAddress: "01020001",
+        barcode: "3902009904",
+        panelName: "FACP",
+    }
+]
+```
 
 #### IO Config Report
 
-    [
-        {
-            model: "PS",
-            address: "1",
-            message1: "SMOKE DETECTOR L1D1",
-            message2: "ABOVE FACP",
-            loop: "1",
-            type: "Smoke",
-            barcode: "0000000000", //all devices without barcodes will return this string
-        }
-    ]
+```javascript
+[
+    {
+        model: "PS",
+        address: "1",
+        message1: "SMOKE DETECTOR L1D1",
+        message2: "ABOVE FACP",
+        loop: "1",
+        type: "Smoke",
+        barcode: "0000000000", //all devices without barcodes will return this string
+    }
+]
+```
+
+## Testing
+
+    yarn test
+or
+
+    npm test
