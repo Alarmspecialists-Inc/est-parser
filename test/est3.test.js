@@ -2,7 +2,7 @@ const {expect} = require('chai');
 const fs = require('fs');
 const path = require('path');
 const { est3Array } = require('./test-data/test-data.js');
-const parseWorksheet = require('../src/ioWorksheet.js');
+const parseWorksheet = require('../src/est3Worksheet.js');
 
 
 describe('EST3 Test', function () {
