@@ -1,6 +1,6 @@
 {
   "name": "@tysonalcorn/est-parser",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Parses select EST reports",
   "main": "index.js",
   "scripts": {

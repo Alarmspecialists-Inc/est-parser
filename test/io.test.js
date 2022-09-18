@@ -1,8 +1,8 @@
-import {expect} from 'chai';
-import fs from 'fs';
-import path from 'path';
-import { ioArray } from './test-data/test-data.js';
-import parseIO from '../src/ioWorksheet.js';
+const {expect} = require('chai');
+const fs = require('fs');
+const path = require('path');
+const { ioArray } = require('./test-data/test-data.js');
+const parseIO = require('../src/ioWorksheet.js');
 
 
 describe('IO Test', function () {

@@ -136,7 +136,7 @@ const parseWorksheet = (buf = Buffer()) => {
         }
         if (!item) {
           if (validWorksheet) resolve(devices.flat());
-          if (!validWorksheet) reject('Invalid PDF')
+          //if (!validWorksheet) reject('Invalid PDF')
         }; 
       });
   })

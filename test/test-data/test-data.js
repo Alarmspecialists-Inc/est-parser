@@ -1,4 +1,4 @@
-export const est3Array = [
+const est3Array = [
   {
     label: "SD_1_DLR",
     message1: "SMOKE DETECTOR L1D1  ",
@@ -238,7 +238,7 @@ export const est3Array = [
   },
 ];
 
-export const ioArray = [
+const ioArray = [
   {
     model: "PS",
     address: "1",
@@ -618,3 +618,6 @@ export const ioArray = [
     loop: "1",
   },
 ];
+
+module.exports.est3Array = est3Array;
+module.exports.ioArray = ioArray;
