@@ -4,6 +4,7 @@
 
     yarn add @tysonalcorn/est-parser
 or
+
     npm install @tysonalcorn/est-parser
 
 ## Introduction
