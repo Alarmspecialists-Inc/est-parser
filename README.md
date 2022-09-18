@@ -17,18 +17,20 @@ or
 
 For Node ONLY. Will NOT work in browser.
 
+EST3 Barcode Worksheet must be printed using Microsoft Print to PDF in 3-SDU as a letter sized document. Exporting the report to a PDF directly in 3-SDU will cause the sizing of the document to be off. This will be addressed in future updates.
+
 ## Usage
 
     import {parseEST3, parseIO} from 'est-parser';
 
     parseEST3(buffer)
         .then(res => {
-            console.log(res) // array of device objects
+            console.log(res) //array of device objects
         })
     
     parseIO(buffer)
         .then(res => {
-            console.log(res) //returns array of device objects
+            console.log(res) //array of device objects
         })
 
 ### Return Values
@@ -51,11 +53,13 @@ For Node ONLY. Will NOT work in browser.
 #### IO Config Report
 
     [
-        model: "PS",
-        address: "1",
-        message1: "SMOKE DETECTOR L1D1",
-        message2: "ABOVE FACP",
-        loop: "1",
-        type: "Smoke",
-        barcode: "0000000000", // all devices without barcodes will return this string
+        {
+            model: "PS",
+            address: "1",
+            message1: "SMOKE DETECTOR L1D1",
+            message2: "ABOVE FACP",
+            loop: "1",
+            type: "Smoke",
+            barcode: "0000000000", //all devices without barcodes will return this string
+        }
     ]
