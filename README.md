@@ -18,7 +18,7 @@
 - EST3 Barcode Worksheet
 - EST4 report parsing to come
 
-For Node ONLY. Will NOT work in browser.
+For Node ONLY. Will NOT work in browser. Relatively fast execution time allows for use in serverless functions (tested with Netlify Functions and GCP Cloud Functions).
 
 EST3 Barcode Worksheet must be printed using Microsoft Print to PDF in 3-SDU as a letter sized document. Exporting the report to a PDF directly in 3-SDU will cause the sizing of the document to be off. This will be addressed in future updates.
 
