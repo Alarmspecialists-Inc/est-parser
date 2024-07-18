@@ -1,4 +1,4 @@
-const { PdfReader } = require("pdfreader");
+import { PdfReader } from "pdfreader";
 
 let xArray = [1.6, 15.25, 24, 34, 42.5];
 const getWorksheetColumns = () => { 
@@ -142,4 +142,4 @@ const parseWorksheet = (buf = Buffer()) => {
   })
 };
 
-module.exports = parseWorksheet;
+export default parseWorksheet

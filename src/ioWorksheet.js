@@ -1,4 +1,4 @@
-const { PdfReader } = require("pdfreader");
+import { PdfReader } from "pdfreader";
 
 
 const TABLE_TYPE_REGEX = /^User Key/;
@@ -210,4 +210,4 @@ const parseWorksheet = (buf = Buffer()) => {
 })
 };
 
-module.exports = parseWorksheet;
+export default parseWorksheet
