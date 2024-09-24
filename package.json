@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/tysonalcorn/est-parser#readme",
   "dependencies": {
-    "pdfreader": "2.0.0",
+    "pdfreader": "^3.0.5",
     "util": "^0.12.4"
   },
   "devDependencies": {
